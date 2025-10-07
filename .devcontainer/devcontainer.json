@@ -27,5 +27,8 @@
 	"remoteEnv": {
                  "PATH": "${containerEnv:PATH}:/usr/local/bin"
          },
+    "hostRequirements": { 
+		        "storage": "64gb" 
+	},
 	"postStartCommand": "sudo rstudio-server start && jupyter lab --ip 0.0.0.0 --no-browser --NotebookApp.token='' --NotebookApp.password=''"
 }
